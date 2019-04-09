@@ -11,6 +11,17 @@
     margin:0 auto;
 }
 </style>
+<script type="text/javascript" >
+    function show(){
+        var radios = document.getElementsByName("optradio");
+        if(radios[2].checked==true){
+            test.style.display="";
+        }
+        else{
+            test.style.display="none";
+        }
+    }
+</script>
 
 
 
@@ -55,7 +66,7 @@
                 <div class="row">
                      <div class="col-md-6">
                         <div class="form-group">
-                            <label for="start_time">出发时间</label>
+                            <label for="start_time">出发日期</label>
                             <select class="form-control" id="start_time">
                                 <option>-请选择-</option>
                                 <option>1</option>
@@ -68,16 +79,50 @@
 
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="vehicle">出行策略</label>
+                            <label for="vehicle">出发时间</label>
                             <select class="form-control" id="vehicle">
                                 <option>-请选择-</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
+                                <option>费用最少</option>
+                                <option>时间最少</option>
+                                <option>限定时间内费用最少</option>
+
                             </select>
                         </div>
                     </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" id="expense" onclick="show()">费用最少</label>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" id="time" onclick="show()">时间最少</label>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" id="condition" onclick="show()">限时最省</label>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3">
+                        <div id="test" class="form-group" style="display:none;">
+                            <label for="ways"></label>
+                            <select class="form-control" id="ways">
+                                <option>-请选择-</option>
+                                <option></option>
+                                <option></option>
+                                <option></option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+
+
                 </div>
                 <button class="btn btn-right btn-success pull-right" type="submit">查询</button>
 
