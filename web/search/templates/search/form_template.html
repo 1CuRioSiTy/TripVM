@@ -1,0 +1,11 @@
+{% for field in form %}
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <span class="text-danger small">{{ field.errors }}</span>
+        </div>
+        <div class="form-group has-feedback">
+            <span class="form-control-feedback" style="color:red">*</span>
+            <input type="text" name="{{ field.name }}" class="form-control" placeholder="{{ field.label }}" required autofocus>
+        </div>
+    </div>
+{% endfor %}

@@ -1,0 +1,50 @@
+{% extends 'search/base_visitor.html' %}
+{% block title %}Register{% endblock %}
+{% block body %}
+
+<div class="container-fluid">
+    <form class="form-signin" role="form" action="" method="post">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3><center>注册一个新账号</center></h3>
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+                    {% csrf_token %}
+                    {% include 'search/form_template.html' %}
+                    <button class="btn btn-right btn-success pull-right" type="submit">注册</button>
+                </div>
+            </div>
+    </form>
+</div>
+
+
+<!--
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-7">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3>注册一个新账号</h3>
+                        {% if error_message %}
+                            <p><strong>{{ error_message }}</strong></p>
+                        {% endif %}
+                        <form class="form-horizontal" role="form" action="" method="post">
+                            {% csrf_token %}
+                            {% include 'search/form_template.html' %}
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-success">提交</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+
+{% endblock %}

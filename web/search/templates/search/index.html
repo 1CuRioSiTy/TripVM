@@ -1,0 +1,111 @@
+<!-- Loads the path to your static files -->
+{% extends 'search/base.html' %}
+{% block title %}Searching{% endblock %}
+{% block home_active %}active{% endblock %}
+{% block body %}
+
+<style>
+    .form-signin{
+    max-width: 500px;
+    padding: 15px;
+    margin:0 auto;
+}
+</style>
+
+
+
+<div class="container-fluid">
+    <form class="form-signin">
+        <div class="panel panel-default">
+            <div class="panel-body ">
+                <ul class="nav nav-pills nav-justified">
+                    <li class="active"><a href="#">指定交通工具</a></li>
+                    <li><a href="#">推荐方案</a></li>
+                </ul>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="start">出发城市</label>
+                            <select class="form-control" id="start">
+                                <option>-请选择-</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="end">目标城市</label>
+                            <select class="form-control" id="end">
+                                <option>-请选择-</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="start_time">出发时间</label>
+                            <select class="form-control" id="start_time">
+                                <option>-请选择-</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="vehicle">交通工具</label>
+                            <select class="form-control" id="vehicle">
+                                <option>-请选择-</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-right btn-success pull-right" type="submit">查询</button>
+
+            </div>
+
+        </div>
+    </form>
+</div>
+
+
+
+
+
+<!--
+{% if all_albums %}
+    <h3>Here are you albums:</h3>
+    <ul>
+        {% for album in all_albums %}
+            <li><a href="{% url 'music:detail' album.id %}">{{ album.album_title }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h3>You don't have any albums</h3>
+{% endif %}
+-->
+
+
+
+
+
+{% endblock %}

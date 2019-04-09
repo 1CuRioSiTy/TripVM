@@ -1,0 +1,33 @@
+body{
+    background: white url("images/background.png");
+}
+
+.navbar{
+    border-radius: 0;
+}
+
+.navbar-brand{
+    font-family: 'Satisfy', cursive;
+    font-size: 20px;
+}
+
+.navbar-nav > li > a{
+
+}
+
+.navbar-form{
+
+}
+
+.col-center-block {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-signin{
+    max-width: 350px;
+    padding: 15px;
+    margin:0 auto;
+}
