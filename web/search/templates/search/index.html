@@ -23,6 +23,9 @@
     }
 </script>
 
+<script type="text/javascript">
+	var app = angular.module('app',["wui.date"]);
+</script>
 
 
 <div class="container-fluid">
@@ -40,11 +43,20 @@
                         <div class="form-group">
                             <label for="start">出发城市</label>
                             <select class="form-control" id="start">
-                                <option>-请选择-</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
+                                <option value="beijing" style="selected: selected">北京</option>
+                                <option value="shanghai">上海</option>
+                                <option value="haerbin">哈尔滨</option>
+                                <option value="nanjing">南京</option>
+                                <option value="chongqing">南昌</option>
+                                <option value="shenyang">成都</option>
+                                <option value="xiameng">厦门</option>
+                                <option value="changsha">长沙</option>
+                                <option value="guangahzou">广州</option>
+                                <option value="shenzhen">深圳</option>
+                                <option value="hongkong">香港</option>
+                                <option value="kunming">昆明</option>
+                                <option value="wulumuqi">乌鲁木齐</option>
+                                <option value="lasa">拉萨</option>
                             </select>
                         </div>
                     </div>
@@ -53,53 +65,52 @@
                         <div class="form-group">
                             <label for="end">目标城市</label>
                             <select class="form-control" id="end">
-                                <option>-请选择-</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
+                                <option value="beijing">北京</option>
+                                <option value="shanghai" selected="selected">上海</option>
+                                <option value="haerbin">哈尔滨</option>
+                                <option value="nanjing">南京</option>
+                                <option value="chongqing">南昌</option>
+                                <option value="shenyang">成都</option>
+                                <option value="xiameng">厦门</option>
+                                <option value="changsha">长沙</option>
+                                <option value="guangahzou">广州</option>
+                                <option value="shenzhen">深圳</option>
+                                <option value="hongkong">香港</option>
+                                <option value="kunming">昆明</option>
+                                <option value="wulumuqi">乌鲁木齐</option>
+                                <option value="lasa">拉萨</option>
                             </select>
                         </div>
                     </div>
 
                 </div>
+
                 <div class="row">
-                     <div class="col-md-6">
+                    <div class="col-md-6">
                         <div class="form-group">
-                            <label for="start_date">出发日期</label>
-                            <select class="form-control" id="start_date">
-                                <option>-请选择-</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
+                            <label for="start_time">出发时间</label>
+                            <div style="margin: 0px;padding: 0px" class="wui-content">
+                                <div style="margin: 0px;padding: 0px" class="wui-area">
+                                    <wui-date format="yyyy-mm-dd hh:mm" placeholder="请选择或输入日期" id="date3" btns="{'ok':'确定','now':'此刻'}" ng-model="date3">
+                                    </wui-date>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                         <div class="form-group">
-                            <label for="start_time1">出发时间</label>
-                            <select class="form-control" id="start_time1">
-                                <option>-请选择-</option>
-                                <option>费用最少</option>
-                                <option>时间最少</option>
-                                <option>限定时间内费用最少</option>
-                            </select>
+                            <label for="start_time">&nbsp</label>
+                            <div style="margin: 0px;padding: 0px" class="wui-content">
+                                <div style="margin: 0px;padding: 0px" class="wui-area">
+                                    <wui-date format="yyyy-mm-dd hh:mm" placeholder="请选择或输入日期" id="date3" btns="{'ok':'确定','now':'此刻'}" ng-model="date3">
+                                    </wui-date>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <label for="start_time2">&nbsp</label>
-                            <select class="form-control" id="start_time2">
-                                <option>-请选择-</option>
-                                <option>费用最少</option>
-                                <option>时间最少</option>
-                                <option>限定时间内费用最少</option>
 
-                            </select>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="row">
                     <div class="col-md-3">

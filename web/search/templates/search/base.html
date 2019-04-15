@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="app" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Ctrip{% endblock %}</title>
@@ -9,6 +9,13 @@
     <link rel="stylesheet" type="text/css" href="{% static 'search/123.css' %}"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'search/wui.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'search/style.css' %}">
+
+    <script type="text/javascript" src="{% static 'search/js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'search/js/angular.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'search/js/wui-date.js' %}"></script>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
